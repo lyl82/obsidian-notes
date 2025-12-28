@@ -1,0 +1,11 @@
+# Trae & VS Code
+.trae/
+.vscode/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Obsidian internal (optional, but keeping it for now)
+# .obsidian/

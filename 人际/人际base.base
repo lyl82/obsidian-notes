@@ -1,0 +1,10 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.folder == "tasks/需求/人际"
+    order:
+      - file.name
+      - file.tags
+      - file.ctime
