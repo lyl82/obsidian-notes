@@ -1,4 +1,4 @@
-"""SQLite schema initialization for the Life OS project."""
+"""SQLite schema initialization for the 人生OS 1.0 project."""
 from pathlib import Path
 import sqlite3
 from typing import Iterable

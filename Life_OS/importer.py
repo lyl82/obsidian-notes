@@ -1,4 +1,4 @@
-"""Seed example data for the Life OS database."""
+"""Seed example data for the 人生OS 1.0 database."""
 from __future__ import annotations
 
 import hashlib

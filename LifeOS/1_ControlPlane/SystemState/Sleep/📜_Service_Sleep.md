@@ -1,4 +1,4 @@
-# LifeOS · System State: Sleep (睡眠)
+# 人生OS 1.0 · System State: Sleep (睡眠)
 
 > **核心定义**：睡眠不是一个 Domain Object，也不是一个 Service。它是一种**系统态（System State）**与**边界机制（Boundary Mechanism）**。它不“做事”，它决定别的东西还能不能做事。
 

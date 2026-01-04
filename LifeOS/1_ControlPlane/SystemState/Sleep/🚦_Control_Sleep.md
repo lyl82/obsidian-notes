@@ -1,4 +1,4 @@
-# LifeOS · Control: Sleep (睡眠状态控制)
+# 人生OS 1.0 · Control: Sleep (睡眠状态控制)
 
 | 字段 | 内容描述 |
 | :--- | :--- |
