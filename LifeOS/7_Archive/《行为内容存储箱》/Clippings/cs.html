@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>睡眠优化记录 - 3月16日</title>
+    <!-- TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 淡入动画 */
+        .fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        /* 平滑滚动 */
+        html { scroll-behavior: smooth; }
+        /* 卡片悬停效果 */
+        .section-card { transition: box-shadow 0.3s, border-color 0.3s; }
+        .section-card:hover { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-color: #3b82f6; }
+        /* 字体和间距 */
+        body { font-family: 'sans-serif'; }
+        .content { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        h1 { font-size: 2.5rem; margin-bottom: 2rem; }
+        h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+        p, ul { margin-bottom: 1.5rem; }
+        ul { list-style-type: disc; padding-left: 1.5rem; }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+    <!-- 主题切换按钮 -->
+    <div class="fixed top-4 right-4 z-10">
+        <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-105 transition-transform">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- 导航锚点 -->
+    <nav class="fixed top-4 left-4 z-10 bg-white dark:bg-gray-800 p-2 rounded-lg shadow">
+        <ul class="space-y-2">
+            <li><a href="#feelings" class="text-sm hover:text-blue-500">今日感受</a></li>
+            <li><a href="#optimization" class="text-sm hover:text-blue-500">行为优化</a></li>
+            <li><a href="#pre-sleep" class="text-sm hover:text-blue-500">睡前安排</a></li>
+            <li><a href="#cognition" class="text-sm hover:text-blue-500">睡眠认知</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="content">
+        <h1 class="text-center fade-in">睡眠优化记录 - 3月16日</h1>
+
+        <!-- 今日感受 -->
+        <section id="feelings" class="mb-8 bg-white dark:bg-gray-700 p-6 rounded-lg section-card fade-in">
+            <h2><i class="fas fa-bed mr-2 text-blue-500"></i>今日感受</h2>
+            <p>今天睡眠质量不佳，处于一种似醒非醒的状态。现实感强烈，但注意力难以集中，容易走神。能量水平较低，任务堆积，回家时间不确定（8点至10点间）。</p>
+        </section>
+
+        <!-- 行为优化 -->
+        <section id="optimization" class="mb-8 bg-white dark:bg-gray-700 p-6 rounded-lg section-card fade-in">
+            <h2><i class="fas fa-lightbulb mr-2 text-blue-500"></i>行为优化</h2>
+            <ul>
+                <li>购买遮光窗帘，晚上9:30后佩戴琥珀镜片眼镜。</li>
+                <li>关灯，在沙发上总结当日工作并计划次日安排，使用暖光台灯替代天花板大灯。</li>
+                <li>若直觉感知入睡时间超过40分钟，则起身活动，尝试服用茶氨酸。</li>
+                <li>起床时间不超过9:00：设置闹钟，醒后用冷水刺激手臂，做10个俯卧撑，步行至公园往返20分钟。</li>
+            </ul>
+        </section>
+
+        <!-- 睡前安排 -->
+        <section id="pre-sleep" class="mb-8 bg-white dark:bg-gray-700 p-6 rounded-lg section-card fade-in">
+            <h2><i class="fas fa-clock mr-2 text-blue-500"></i>睡前一小时活动</h2>
+            <p>通过筛选排除法确定适宜活动：</p>
+            <ul>
+                <li>避免接触电子设备屏幕光源。</li>
+                <li>避免进行高强度运动。</li>
+                <li>推荐活动：手写日记、阅读古诗。</li>
+                <li>设置电脑于20:30自动关机，新增21:45自动关机程序。</li>
+            </ul>
+        </section>
+
+        <!-- 睡眠认知 -->
+        <section id="cognition" class="mb-8 bg-white dark:bg-gray-700 p-6 rounded-lg section-card fade-in">
+            <h2><i class="fas fa-brain mr-2 text-blue-500"></i>睡眠认知</h2>
+            <p>减少对入睡过程的过度关注，入睡应是自然发生的行为。与其专注于“如何入睡”，不如思考“如何保持清醒”。反思生活方式中可能影响睡眠的缺失环节。过去与他人同睡并结合白天户外运动时，入睡迅速，几乎无入睡困难。学会放下思绪、放空思维是关键，可借助任务管理工具辅助。</p>
+        </section>
+    </main>
+
+    <!-- 回到顶部按钮 -->
+    <div class="fixed bottom-4 right-4 z-10">
+        <a href="#" class="p-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- 作者信息 -->
+    <footer class="mt-12 py-6 bg-gray-200 dark:bg-gray-700 text-center">
+        <p class="font-semibold">作者: 匿名用户</p>
+        <div class="flex justify-center gap-4 mt-2">
+            <a href="https://github.com" target="_blank" class="hover:text-blue-500"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com" target="_blank" class="hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="text-sm mt-2">© 2025 匿名用户. All rights reserved.</p>
+    </footer>
+
+    <!-- 深色模式切换脚本 -->
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        toggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            toggle.innerHTML = html.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            html.classList.add('dark');
+            toggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    </script>
+</body>
+</html>

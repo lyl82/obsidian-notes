@@ -1,0 +1,5 @@
+Thread by @MaxBlumenthal
+https://x.com/MaxBlumenthal/status/1887020724507807916
+**Max Blumenthal** @MaxBlumenthal [2025-02-05](https://x.com/MaxBlumenthal/status/1887020724507807916/history)
+
+Trump's pledge to "take over" Gaza offered a rare opportunity to hear an American president articulate the logic of Zionism in its rawest, most essential form. The history of Israel is defined by a continuous process of controlling and removing the Palestinian population by force, with the consent and participation of the majority of its Jewish citizens, in order to demographically engineer a Herrenvolk pseudo-democracy. Now, Trump has vowed to carry out the Final Solution on Israel's behalf, and possibly with US troops. Israelis love his genocidal energy, with 80% telling the Jerusalem Post they favor Trump's plan, and only 13% declaring it "immoral." Average Americans might be less enthusiastic about embarking on a foreign ethnic cleansing adventure, but as this episode makes undeniably clear, they are not the ones who determine their government's policy when it comes to the "Jewish and democratic" state.
