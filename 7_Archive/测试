@@ -1,0 +1,2 @@
+# 直接启动（端口默认 3333，可自定义 --port 端口号）
+npx feishu-mcp --feishu-app-id=cli_a9c4a46590f89bb4 --feishu-app-secret=hJBhhVaGEg44R5BCMIi16fAoxrxC2SJr --feishu-user-access-token=你的user_access_token
