@@ -1,5 +1,5 @@
 Param(
-    [string]$RepoPath = "d:\个人记录\obsidian-file\wjmber\LifeOS"
+    [string]$RepoPath = "."
 )
 
 Set-Location $RepoPath
