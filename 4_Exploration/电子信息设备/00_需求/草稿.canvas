@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"4ade5ca2f739e708","type":"text","text":"通过表格里面的链接去直达","x":-275,"y":-168,"width":250,"height":60},
+		{"id":"05db0a82da7015e6","type":"text","text":"书签里面的还有一些 R ss.嗯这里主要是分为一个云端 pc端以及嗯智能的手机这一段","x":57,"y":-172,"width":250,"height":60},
+		{"id":"1ec3c8d7e6e0fb27","type":"text","text":"按平台进行一个区分。国内的有三个平台国外的目前是一个平台","x":-324,"y":-80,"width":244,"height":83},
+		{"id":"0eddbbd97c26ce9b","type":"text","text":"嗯那么我需要什么呢我需要什么类型的信息","x":-300,"y":40,"width":250,"height":60},
+		{"id":"0f4b9ac245990719","type":"text","text":"一个行业一个国家一个局部地区","x":23,"y":22,"width":250,"height":60},
+		{"id":"b9987912672790f5","type":"text","text":"这里关键的是一个手机端的控制","x":23,"y":89,"width":250,"height":60},
+		{"id":"1bff6c84c2692018","x":-387,"y":197,"width":250,"height":60,"type":"text","text":"所以让我想到了扩展就是不仅仅是一种智能信息设备同时还有书籍还有我的日常生活中所接触的一些广告牌或者说它其实就是一种如何在这样的一个时代那么如何与这个时代的信息进行一个交互我们智能信息设备真是嗯比较容易失控的一个问题因为它意味着无穷的无尽的信息变化"}
+	],
+	"edges":[
+		{"id":"cc21ddb3ab2ba2a5","fromNode":"4ade5ca2f739e708","fromSide":"right","toNode":"05db0a82da7015e6","toSide":"left"},
+		{"id":"d9d56e923a63b7ed","fromNode":"0eddbbd97c26ce9b","fromSide":"right","toNode":"0f4b9ac245990719","toSide":"left"},
+		{"id":"9a189e697c486ef6","fromNode":"0eddbbd97c26ce9b","fromSide":"right","toNode":"b9987912672790f5","toSide":"left"}
+	]
+}

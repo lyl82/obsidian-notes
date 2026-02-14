@@ -15,7 +15,7 @@
   - 任何结论与结构性生成，最终以修改/新增本地文件固化
 
 - 权威上下文
-  - 只读取并引用：Meta 层的系统文件，尤其是：
+  - 只读取并引用：Meta 层的系统文件夹内容，尤其是：
     - [认知对话系统-最高解释文件.md](file:///d:/个人记录/obsidian-file/wjmber/LifeOS/Meta/认知对话系统-最高解释文件.md)
     - [LifeOS_AI_Context.md](file:///d:/个人记录/obsidian-file/wjmber/LifeOS/Meta/LifeOS_AI_Context.md)（若存在）
     - 与问题相关的 Domain/对象最高解释文件与 README

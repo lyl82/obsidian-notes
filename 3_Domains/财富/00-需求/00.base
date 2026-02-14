@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.folder == "LifeOS/3_Domains/财富/00-需求"
+    order:
+      - file.name
+      - file.ctime
+      - description
+      - status
+    sort:
+      - property: file.ctime
+        direction: DESC

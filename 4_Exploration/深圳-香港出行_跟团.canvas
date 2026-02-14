@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"node_start","type":"text","text":"🎯 起点\n决定采用「跟团一日游」方式去香港","x":-100,"y":-200,"width":360,"height":60},
+		{"id":"node_3_7_select","type":"text","text":"📅 选团（前 3–7 天）\n- 平台：携程 / 飞猪 / 马蜂窝 / 本地旅行社\n- 搜索「深圳 香港 一日游」","x":-100,"y":-110,"width":440,"height":80},
+		{"id":"node_3_7_check","type":"text","text":"🔍 核对产品信息\n- 集合时间、地点\n- 过关方式：团队 / 个人\n- 是否含餐、含门票\n- 是否有购物安排与评价","x":-100,"y":10,"width":440,"height":110},
+		{"id":"node_book_info","type":"text","text":"🧾 预订：填写信息\n- 姓名（与证件一致）\n- 身份证号\n- 港澳通行证号 + 签注","x":-100,"y":150,"width":380,"height":100},
+		{"id":"node_book_remark","type":"text","text":"🗒 预订：备注 & 保存\n- 饮食忌口 / 晕车\n- 保存订单截图\n- 记录客服 / 领队联系方式","x":-100,"y":280,"width":400,"height":100},
+		{"id":"node_day_before_confirm","type":"text","text":"✅ 前一天：确认信息\n- 再看一遍订单\n- 确认集合时间（到分钟）\n- 确认集合地点（地铁线路与出口）\n- 加领队微信 / 确认电话","x":-100,"y":420,"width":460,"height":120},
+		{"id":"node_day_before_pack","type":"text","text":"🧳 前一天：打包行李\n- 证件：身份证 + 港澳通行证\n- 现金：200–500 港币 或移动支付\n- 手机 + 充电宝\n- 雨伞 / 防晒 / 口罩","x":-100,"y":570,"width":470,"height":120},
+		{"id":"node_day_depart_meet","type":"text","text":"🚶 出行当日：集合\n- 提前 10–20 分钟到\n- 找到领队 / 旅行团","x":500,"y":-110,"width":340,"height":80},
+		{"id":"node_day_border","type":"text","text":"🛂 出行当日：过关\n- 深圳边检出境\n- 香港入境检查\n- 全程跟着领队走","x":500,"y":10,"width":360,"height":100},
+		{"id":"node_day_listen","type":"text","text":"🧭 在港期间：跟随安排\n- 记清每次集合时间\n- 拍照记录集合地点地标\n- 不单独乱走","x":500,"y":150,"width":360,"height":100},
+		{"id":"node_day_consume","type":"text","text":"🛍 在港期间：游玩 & 消费\n- 主要体验景点和城市\n- 购物点只买真正需要的\n- 克制购买高价保健品 / 珠宝","x":500,"y":290,"width":420,"height":120},
+		{"id":"node_day_return","type":"text","text":"🚌 当日晚上：返程\n- 按领队通知时间集合\n- 统一回到口岸\n- 过关回深圳，地铁 / 网约车回家","x":500,"y":440,"width":430,"height":110},
+		{"id":"node_after_review","type":"text","text":"📝 回家后：简单复盘\n- 记录这次体验\n- 标记做得好的地方\n- 想想下次是否尝试自由行","x":500,"y":580,"width":380,"height":110}
+	],
+	"edges":[
+		{"id":"edge_start_to_select","fromNode":"node_start","fromSide":"bottom","toNode":"node_3_7_select","toSide":"top"},
+		{"id":"edge_select_to_check","fromNode":"node_3_7_select","fromSide":"bottom","toNode":"node_3_7_check","toSide":"top"},
+		{"id":"edge_check_to_book_info","fromNode":"node_3_7_check","fromSide":"bottom","toNode":"node_book_info","toSide":"top"},
+		{"id":"edge_book_info_to_book_remark","fromNode":"node_book_info","fromSide":"bottom","toNode":"node_book_remark","toSide":"top"},
+		{"id":"edge_book_remark_to_day_before_confirm","fromNode":"node_book_remark","fromSide":"bottom","toNode":"node_day_before_confirm","toSide":"top"},
+		{"id":"edge_day_before_confirm_to_pack","fromNode":"node_day_before_confirm","fromSide":"bottom","toNode":"node_day_before_pack","toSide":"top"},
+		{"id":"edge_pack_to_meet","fromNode":"node_day_before_pack","fromSide":"right","toNode":"node_day_depart_meet","toSide":"left"},
+		{"id":"edge_meet_to_border","fromNode":"node_day_depart_meet","fromSide":"bottom","toNode":"node_day_border","toSide":"top"},
+		{"id":"edge_border_to_listen","fromNode":"node_day_border","fromSide":"bottom","toNode":"node_day_listen","toSide":"top"},
+		{"id":"edge_listen_to_consume","fromNode":"node_day_listen","fromSide":"bottom","toNode":"node_day_consume","toSide":"top"},
+		{"id":"edge_consume_to_return","fromNode":"node_day_consume","fromSide":"bottom","toNode":"node_day_return","toSide":"top"},
+		{"id":"edge_return_to_review","fromNode":"node_day_return","fromSide":"bottom","toNode":"node_after_review","toSide":"top"}
+	]
+}

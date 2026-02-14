@@ -1,0 +1,15 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.folder.contains("LifeOS/7_Archive/《2025记录》")
+    order:
+      - file.name
+      - file.ctime
+      - file.path
+    sort:
+      - property: file.path
+        direction: DESC
+      - property: file.ctime
+        direction: ASC

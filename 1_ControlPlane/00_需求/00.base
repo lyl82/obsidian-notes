@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.folder == "LifeOS/1_ControlPlane/00_需求"
+    order:
+      - file.name
+      - file.ctime
+      - description
+      - type
+    sort:
+      - property: file.ctime
+        direction: DESC

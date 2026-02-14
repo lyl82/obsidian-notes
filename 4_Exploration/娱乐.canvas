@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"171332977002c082","type":"text","text":"视频游戏","x":-220,"y":260,"width":250,"height":60},
+		{"id":"0ba82bd77449ced1","type":"text","text":"股票 半导体 有很多科技股的不错收益","x":40,"y":200,"width":250,"height":60},
+		{"id":"cc66b8115b0c2225","type":"text","text":"衣服","x":-220,"y":33,"width":250,"height":60},
+		{"id":"9a588f64b8e51754","type":"text","text":"公司财报","x":-220,"y":140,"width":250,"height":60},
+		{"id":"d8dc8cac32b4cdc0","type":"text","text":"aigc研报","x":40,"y":80,"width":250,"height":60},
+		{"id":"aed0db33157dfd72","type":"text","text":"音乐","x":-260,"y":370,"width":100,"height":50},
+		{"id":"a6c95304d491b2ea","type":"text","text":"结合视频：在晚上，关于自己的","x":-85,"y":364,"width":250,"height":60},
+		{"id":"1fbfd14bbfe4b897","type":"text","text":"参与 行动  练习口琴 电子鼓","x":-104,"y":431,"width":250,"height":60},
+		{"id":"30745206ca92cba3","type":"text","text":"体验服务：脱口秀","x":-304,"y":514,"width":250,"height":60},
+		{"id":"25b7848752a33ac4","type":"text","text":"锻炼团课\n","x":-20,"y":514,"width":250,"height":60},
+		{"id":"4f1ab0d88b026899","type":"text","text":"三国杀","x":-223,"y":634,"width":250,"height":60},
+		{"id":"e7df6b12ce44d536","type":"text","text":"按摩","x":41,"y":592,"width":250,"height":60},
+		{"id":"898ba76685d8fec3","type":"text","text":"ai图片","x":-460,"y":901,"width":250,"height":60},
+		{"id":"057d560eb81dea0c","type":"text","text":"口琴模拟器，练习器","x":-84,"y":901,"width":250,"height":60},
+		{"id":"b569381499d76b6c","type":"text","text":"看书 ","x":-342,"y":1109,"width":250,"height":60},
+		{"id":"b360d822b05dc2b3","type":"text","text":"创作","x":-40,"y":1139,"width":250,"height":60},
+		{"id":"a735e1cdbfcedb0c","type":"text","text":"电影","x":-342,"y":1208,"width":250,"height":60},
+		{"id":"cbddb4916642f0ea","type":"text","text":"听课","x":-270,"y":761,"width":250,"height":60},
+		{"id":"bf90c83e3c8bb3f4","type":"text","text":"自动化 手机脚本","x":26,"y":778,"width":250,"height":60},
+		{"id":"2c75ab98996d3543","x":291,"y":502,"width":250,"height":60,"type":"text","text":"超级猩猩-小号-武术课"},
+		{"id":"c072c71435791dc3","x":369,"y":577,"width":250,"height":60,"type":"text","text":"必须"},
+		{"id":"bfd9fabeec7f8891","x":304,"y":46,"width":250,"height":60,"type":"text","text":"还是身体锻炼最好"}
+	],
+	"edges":[
+		{"id":"21b7798bd7edd9f5","fromNode":"aed0db33157dfd72","fromSide":"right","toNode":"a6c95304d491b2ea","toSide":"left"},
+		{"id":"ec515129eb410c69","fromNode":"aed0db33157dfd72","fromSide":"right","toNode":"1fbfd14bbfe4b897","toSide":"left"},
+		{"id":"8a0627647a21c879","fromNode":"aed0db33157dfd72","fromSide":"bottom","toNode":"30745206ca92cba3","toSide":"top"},
+		{"id":"588dc02d66b1c889","fromNode":"aed0db33157dfd72","fromSide":"bottom","toNode":"25b7848752a33ac4","toSide":"top"},
+		{"id":"c82ef8fca4ab635e","fromNode":"aed0db33157dfd72","fromSide":"bottom","toNode":"4f1ab0d88b026899","toSide":"top"},
+		{"id":"72eda936cddb7839","fromNode":"25b7848752a33ac4","fromSide":"right","toNode":"2c75ab98996d3543","toSide":"left"},
+		{"id":"2d3cf19fe90719a9","fromNode":"25b7848752a33ac4","fromSide":"right","toNode":"c072c71435791dc3","toSide":"left"}
+	]
+}

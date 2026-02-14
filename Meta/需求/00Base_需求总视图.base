@@ -1,0 +1,35 @@
+formulas:
+  未命名: ""
+  未命名 2: ""
+  未命名 3: ""
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.folder == "LifeOS/Meta/需求"
+    order:
+      - file.name
+      - description
+      - status
+      - file.ctime
+      - file.folder
+    sort:
+      - property: file.ctime
+        direction: DESC
+      - property: description
+        direction: ASC
+    columnSize:
+      note.description: 319
+      file.ctime: 128
+    rowHeight: medium
+  - type: table
+    name: 会话
+    filters:
+      and:
+        - type == "对话"
+    order:
+      - file.name
+      - description
+      - status
+    rowHeight: medium
