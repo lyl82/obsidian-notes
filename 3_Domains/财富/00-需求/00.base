@@ -12,3 +12,4 @@ views:
     sort:
       - property: file.ctime
         direction: DESC
+    rowHeight: medium

@@ -33,3 +33,17 @@ views:
       - description
       - status
     rowHeight: medium
+  - type: table
+    name: 需求
+    filters:
+      and:
+        - type == "需求"
+    order:
+      - file.name
+      - file.ctime
+      - status
+      - 截止时间
+    sort:
+      - property: file.ctime
+        direction: DESC
+    rowHeight: tall
