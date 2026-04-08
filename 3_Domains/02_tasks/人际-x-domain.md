@@ -1,0 +1,52 @@
+---
+type: task
+
+
+# === 核心定义 ===
+title: ""                # 任务名称（必须是具体动作）
+action: ""               # 行为描述（动词开头，比如“写3道题”）
+
+# === 时间结构 ===
+scheduled_time: ""       # 计划开始时间（必须绑定）
+estimated_duration: 0    # 预估时长（分钟）
+actual_duration: 0       # 实际时长（执行后填写）
+
+# === 状态控制 ===
+status: pending          # pending / doing / done / abandoned
+#mode: control            # control / autopilot（是否需要主动专注）
+
+# === 约束与权重 ===
+value: 0                 # 收益（1-5）
+urgency: 0               # 紧急度（1-5）
+cost: 0                  # 消耗（1-5，主观体感）
+priority_score: 0        # 自动计算：(value * urgency) / cost
+
+# === 上下文环境 ===
+#location: ""             # 执行地点（家 / 外出 / 路上）
+#energy_required: 0       # 需要的精力等级（1-5）
+
+# === 复盘反馈 ===
+# result: ""               # 结果（完成情况）
+#deviation_reason: ""     # 偏差原因（为什么没按计划）
+#state_note: ""           # 当时状态（疲劳 / 抗拒 / 流畅）
+
+# === 关联（可选） ===
+purpose_tags: []         # 目的标签（收入 / 体验 / 新奇）
+project: ""              # 所属项目（如果有）
+
+date: 2026-04-02
+---
+
+
+
+## 目标  
+（可交付结果）  
+  **在自己本来就会做的事情上，把"一个人"换成"有人的地方"。​**
+## 完成标准  
+（可判断）  
+  具体的task新加一个全局规则：必须包含动作：约人尝试。
+## 现实动作  
+（下一步具体动作）
+- 在社交媒体-发布帖子内容：
+  有不少参考，也可以主动评论或私信联系。
+## 记录：执行，结果

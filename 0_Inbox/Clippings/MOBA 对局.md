@@ -2,7 +2,7 @@
 title: ChatGPT
 source: https://chatgpt.com/c/6998311b-f59c-832b-aecd-73ca4eda2c2a
 author:
-  - "[[ChatGPT]]"
+  - "[[关于恐惧-0331]]"
 published:
 created: 2026-03-26
 description: ChatGPT is your AI chatbot for everyday use. Chat with the most advanced AI to explore ideas, solve problems, and learn faster.

@@ -1,5 +1,5 @@
 ---
-type: 需求
+type:
 description:
 status:
   - 🌱种子

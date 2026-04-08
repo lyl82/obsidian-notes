@@ -23,4 +23,7 @@ skill.sh
 
 # 需求描述：
 
+- [ ] excel不使用鼠标，keyboard only：🔽 ➕ 2026-03-29 
+      看见有finance人事在视频处理的很快速。
 
+- [ ] 来自招聘者的真实文案：熟练掌握excel 数据透视表相关统计图表的制作及函数公式的运用(如 sumifsumifs、If、vlookup+mach函数嵌套、index+much函数嵌套等);

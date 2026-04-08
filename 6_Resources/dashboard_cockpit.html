@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人生时间流大盘 - Cockpit</title>
+    <!-- Tailwind CSS 用于布局和通用样式 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ECharts 用于数据可视化 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <style>
+        body {
+            background-color: #0f172a; /* 深色沉浸式驾驶舱背景 */
+            color: #f8fafc;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        }
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #475569; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+    </style>
+</head>
+<body class="p-4 md:p-8 bg-slate-900 text-slate-100">
+    <div class="max-w-[1440px] mx-auto w-full flex flex-col gap-8 pb-12">
+        
+        <!-- 顶部：全局指标 (Header & KPIs) -->
+        <header class="flex flex-col md:flex-row justify-between items-center gap-4 mb-2">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+                    人生时间流驾驶舱 (Time Cockpit)
+                </h1>
+                <p class="text-slate-400 text-sm mt-1">统计周期: 2026/03/28 - 2026/04/03 (7天)</p>
+            </div>
+            
+            <!-- KPI Cards -->
+            <div class="flex gap-4 w-full md:w-auto">
+                <div class="glass-panel px-6 py-3 flex-1 md:flex-none text-center">
+                    <div class="text-xs text-slate-400 mb-1">总追踪时长</div>
+                    <div class="text-2xl font-bold text-cyan-400">46.5 <span class="text-sm font-normal text-slate-500">h</span></div>
+                </div>
+                <div class="glass-panel px-6 py-3 flex-1 md:flex-none text-center">
+                    <div class="text-xs text-slate-400 mb-1">日均追踪</div>
+                    <div class="text-2xl font-bold text-blue-400">6.6 <span class="text-sm font-normal text-slate-500">h/天</span></div>
+                </div>
+                <div class="glass-panel px-6 py-3 flex-1 md:flex-none text-center">
+                    <div class="text-xs text-slate-400 mb-1">最大投入类别</div>
+                    <div class="text-2xl font-bold text-emerald-400">身体移动</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 中部区域：时间分配比例 (Donut) + 专注热力区块 (Treemap) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- 甜甜圈图：宏观大盘 -->
+            <div class="glass-panel p-6 flex flex-col">
+                <h2 class="text-base font-semibold text-slate-300 mb-4 flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-cyan-500"></span>
+                    全局时间分配占比
+                </h2>
+                <div id="overviewChart" class="w-full h-[400px]"></div>
+            </div>
+
+            <!-- 树图：具体事项面积 -->
+            <div class="glass-panel p-6 flex flex-col">
+                <h2 class="text-base font-semibold text-slate-300 mb-4 flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                    专注热力区块 (面积代表绝对时长)
+                </h2>
+                <div id="treemapChart" class="w-full h-[400px]"></div>
+            </div>
+        </div>
+
+        <!-- 底部区域：每日节律趋势 (Stacked Bar) -->
+        <div class="glass-panel p-6 flex flex-col">
+            <h2 class="text-base font-semibold text-slate-300 mb-4 flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                每日时间流向趋势
+            </h2>
+            <div id="trendChart" class="w-full h-[450px]"></div>
+        </div>
+
+    </div>
+
+    <!-- 图表初始化与数据渲染 JS -->
+    <script>
+        // 通用图表主题色 (深色版)
+        const colors = ['#0ea5e9', '#10b981', '#8b5cf6', '#f59e0b', '#ec4899', '#64748b'];
+
+        // 1. 全局概览图 (Donut)
+        const initOverviewChart = () => {
+            const chart = echarts.init(document.getElementById('overviewChart'));
+            const data = [
+                { value: 12.0, name: '身体与移动' },
+                { value: 11.8, name: '求职与职业' },
+                { value: 5.0,  name: '兼职/生存' },
+                { value: 2.7,  name: '娱乐放松' },
+                { value: 2.7,  name: '情绪复盘' },
+                { value: 1.1,  name: '生活杂务' },
+                { value: 6.8,  name: '未记录/碎片' }
+            ];
+            
+            chart.setOption({
+                color: colors,
+                tooltip: { trigger: 'item', formatter: '{b}: {c} h ({d}%)', backgroundColor: 'rgba(15,23,42,0.9)', borderColor: '#334155', textStyle: { color: '#e2e8f0' } },
+                legend: { orient: 'vertical', right: 10, top: 'center', textStyle: { color: '#94a3b8', fontSize: 12 }, icon: 'circle' },
+                series: [{
+                    type: 'pie',
+                    radius: ['50%', '80%'],
+                    center: ['40%', '50%'],
+                    avoidLabelOverlap: false,
+                    itemStyle: { borderRadius: 8, borderColor: '#0f172a', borderWidth: 2 },
+                    label: { show: false },
+                    emphasis: { label: { show: true, fontSize: 16, fontWeight: 'bold', color: '#fff', formatter: '{c}h' } },
+                    labelLine: { show: false },
+                    data: data
+                }]
+            });
+            return chart;
+        };
+
+        // 2. 热力区块图 (Treemap)
+        const initTreemapChart = () => {
+            const chart = echarts.init(document.getElementById('treemapChart'));
+            const data = [
+                {
+                    name: '求职与职业 (11.8h)', value: 11.8,
+                    children: [{ name: '机会监控', value: 4.5 }, { name: '准备面试', value: 3.4 }, { name: '修改简历', value: 2.7 }, { name: '脚本测试', value: 0.7 }, { name: '实际面试', value: 0.4 }]
+                },
+                {
+                    name: '身体与移动 (12.0h)', value: 12.0,
+                    children: [{ name: '物理移动', value: 9.3 }, { name: '公园散步', value: 2.7 }]
+                },
+                { name: '未记录/碎片 (6.8h)', value: 6.8, itemStyle: { color: '#475569' } },
+                { name: '兼职活动 (5.0h)', value: 5.0, children: [{ name: '兼职活动', value: 5.0 }] },
+                { name: '情绪与复盘 (2.7h)', value: 2.7, children: [{ name: '惊恐复盘', value: 2.7 }] },
+                { name: '娱乐放松 (2.7h)', value: 2.7, children: [{ name: '脱口秀', value: 2.1 }, { name: '视频游戏', value: 0.7 }] },
+                { name: '生活杂务 (1.1h)', value: 1.1, children: [{ name: '整理房间', value: 0.7 }, { name: '健康证', value: 0.4 }] }
+            ];
+
+            chart.setOption({
+                color: colors,
+                tooltip: { formatter: info => `<div style="color:#fff;background:rgba(15,23,42,0.9);padding:4px 8px;border-radius:4px;">${info.name}<br/>耗时: <b style="color:#38bdf8">${info.value} h</b></div>`, backgroundColor: 'transparent', borderColor: 'transparent', shadowBlur: 0 },
+                series: [{
+                    type: 'treemap',
+                    roam: false,
+                    nodeClick: false,
+                    breadcrumb: { show: false },
+                    label: { show: true, formatter: '{b}', fontSize: 12 },
+                    itemStyle: { borderColor: '#0f172a', borderWidth: 2, gapWidth: 2 },
+                    data: data
+                }]
+            });
+            return chart;
+        };
+
+        // 3. 每日趋势图 (Stacked Bar)
+        const initTrendChart = () => {
+            const chart = echarts.init(document.getElementById('trendChart'));
+            chart.setOption({
+                color: colors,
+                tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, backgroundColor: 'rgba(15,23,42,0.9)', borderColor: '#334155', textStyle: { color: '#e2e8f0' } },
+                legend: { bottom: 0, textStyle: { color: '#94a3b8' }, icon: 'roundRect' },
+                grid: { left: '2%', right: '2%', top: '10%', bottom: '15%', containLabel: true },
+                xAxis: { type: 'category', data: ['03/28', '03/29', '03/30', '03/31', '04/01', '04/02', '04/03'], axisLine: { lineStyle: { color: '#475569' } }, axisLabel: { color: '#94a3b8' } },
+                yAxis: { type: 'value', name: '时长 (小时)', nameTextStyle: { color: '#64748b' }, splitLine: { lineStyle: { color: '#1e293b', type: 'dashed' } }, axisLabel: { color: '#94a3b8' } },
+                series: [
+                    { name: '求职与职业', type: 'bar', stack: 'total', data: [0, 2.7, 2.6, 1.7, 2.2, 1.5, 0] },
+                    { name: '身体与移动', type: 'bar', stack: 'total', data: [1.1, 0, 0, 0, 2.1, 4.2, 1.9] },
+                    { name: '兼职/生存', type: 'bar', stack: 'total', data: [5.0, 0, 0.6, 0, 0, 0.5, 0] },
+                    { name: '娱乐放松', type: 'bar', stack: 'total', data: [0, 0, 0, 0, 2.1, 0, 0.7] },
+                    { name: '情绪与复盘', type: 'bar', stack: 'total', data: [0, 0, 0, 2.7, 0, 0, 0] },
+                    { name: '未记录/碎片', type: 'bar', stack: 'total', data: [0.3, 2.3, 3.6, 1.2, 1.3, 1.6, 1.2] }
+                ]
+            });
+            return chart;
+        };
+
+        // 挂载图表并处理自适应
+        const charts = [initOverviewChart(), initTreemapChart(), initTrendChart()];
+        window.addEventListener('resize', () => charts.forEach(c => c.resize()));
+    </script>
+</body>
+</html>

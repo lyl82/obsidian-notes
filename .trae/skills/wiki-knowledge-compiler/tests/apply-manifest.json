@@ -1,0 +1,28 @@
+{
+  "changes": [
+    {
+      "path": "d:\\个人记录\\obsidian-file\\wjmber\\LifeOS\\.trae\\skills\\wiki-knowledge-compiler\\tests\\wiki-root\\summaries\\status-test.md",
+      "content": "---\ntitle: Summary - status test\ncreated: 2026-04-08\ntags:\n  - wiki\n  - summary\nsource_file: \"[[.trae/skills/wiki-knowledge-compiler/tests/raw-root/status-test]]\"\nsource_url: \"\"\n---\n\n## 核心内容\nstatus test summary.\n\n## 关键点\n- a\n- b\n- c\n\n## 关联概念\n- [[ @Status Test]]\n\n## 备注\n- none\n"
+    },
+    {
+      "path": "d:\\个人记录\\obsidian-file\\wjmber\\LifeOS\\.trae\\skills\\wiki-knowledge-compiler\\tests\\wiki-root\\concepts\\Status Test.md",
+      "content": "---\ntitle: Status Test\ncreated: 2026-04-08\ntags:\n  - wiki\n  - concept\n  - test\n---\n\n## 定义\nstatus test concept.\n\n## 核心要点\n- a\n- b\n- c\n\n## 适用边界\n- test\n\n## 相关概念\n- [[ @Status Test]]\n\n## 来源\n- [[ @summaries/status-test]]\n"
+    },
+    {
+      "path": "d:\\个人记录\\obsidian-file\\wjmber\\LifeOS\\.trae\\skills\\wiki-knowledge-compiler\\tests\\generated-wiki\\summaries\\sample.md",
+      "content": "---\ntitle: Summary - sample\ncreated: 2026-04-04\ntags:\n  - wiki\n  - summary\nsource_file: \"[[0_Inbox/Clippings/sample]]\"\nsource_url: \"\"\n---\n\n## 核心内容\nsample summary body.\n\n## 关键点\n- point 1\n- point 2\n- point 3\n\n## 关联概念\n- [[ @Sample Concept]]\n\n## 备注\n- none\n"
+    },
+    {
+      "path": "d:\\个人记录\\obsidian-file\\wjmber\\LifeOS\\.trae\\skills\\wiki-knowledge-compiler\\tests\\generated-wiki\\concepts\\Sample Concept.md",
+      "content": "---\ntitle: Sample Concept\ncreated: 2026-04-04\ntags:\n  - wiki\n  - concept\n  - sample\n---\n\n## 定义\nsample concept definition.\n\n## 核心要点\n- item 1\n- item 2\n- item 3\n\n## 适用边界\n- sample scope\n\n## 相关概念\n- [[ @Another Concept]]\n\n## 来源\n- [[ @summaries/sample]]\n"
+    },
+    {
+      "path": "d:\\个人记录\\obsidian-file\\wjmber\\LifeOS\\.trae\\skills\\wiki-knowledge-compiler\\tests\\generated-wiki\\concepts\\Another Concept.md",
+      "content": "---\ntitle: Another Concept\ncreated: 2026-04-04\ntags:\n  - wiki\n  - concept\n  - sample\n---\n\n## 定义\nanother concept definition.\n\n## 核心要点\n- item 1\n- item 2\n- item 3\n\n## 适用边界\n- sample scope\n\n## 相关概念\n- [[ @Sample Concept]]\n\n## 来源\n- [[ @summaries/sample]]\n"
+    },
+    {
+      "path": "d:\\个人记录\\obsidian-file\\wjmber\\LifeOS\\.trae\\skills\\wiki-knowledge-compiler\\tests\\generated-wiki\\index.md",
+      "content": "---\ntitle: Wiki Index\ncreated: 2026-04-04\ntags:\n  - wiki\n  - index\n---\n\n## Summaries\n- [[ @summaries/sample]]\n\n## Concepts\n- [[ @concepts/Sample Concept]]\n"
+    }
+  ]
+}

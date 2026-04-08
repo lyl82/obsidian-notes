@@ -16,6 +16,7 @@
 
 - GitHub `origin/main` 更新到最新提交
 - 本地新增 1 条提交记录（提交信息为当天日期）
+- 可选：创建并推送 1 个标签（标签名为当天日期）
 
 ## 标准流程（PowerShell）
 
@@ -33,7 +34,10 @@ $date = Get-Date -Format "yyyy-MM-dd"
 git add -A
 git commit -m $date
 
+git tag -a $date -m $date
+
 git push origin main
+git push origin $date
 ```
 
 ## 无变更也要留版本记录
@@ -44,7 +48,9 @@ $date = Get-Date -Format "yyyy-MM-dd"
 
 git status --porcelain=v1
 git commit --allow-empty -m $date
+git tag -a $date -m $date
 git push origin main
+git push origin $date
 ```
 
 ## 初次绑定/检查远程
@@ -111,6 +117,46 @@ git config --global http.sslBackend schannel
 处理建议：
 - HTTPS：使用 Git Credential Manager 或 Personal Access Token（PAT），不要把 token 写入仓库文件
 - SSH：改用 SSH remote，并确保已配置密钥
+
+免重复输入 token（推荐方案）：
+
+```powershell
+git config --global credential.helper manager
+```
+
+验证当前是否在使用凭证管理器：
+
+```powershell
+git config --global --get credential.helper
+```
+
+SSH（彻底避免 token，推荐用于 Trae 这种环境）：
+
+```powershell
+ssh-keygen --% -t ed25519 -C <your_email> -f $env:USERPROFILE\.ssh\id_ed25519 -N ""
+Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub
+```
+
+把输出的公钥添加到 GitHub（Settings → SSH and GPG keys → New SSH key）后，切换远程并推送：
+
+```powershell
+git remote set-url origin git@github.com:<owner>/<repo>.git
+git push origin main
+git push origin $date
+```
+
+标签使用规范：
+
+- 标签名建议固定 `yyyy-MM-dd`，与提交信息保持一致
+- 若当天标签已存在且你想重打到最新提交：
+
+```powershell
+$date = Get-Date -Format "yyyy-MM-dd"
+git tag -d $date
+git push origin :refs/tags/$date
+git tag -a $date -m $date
+git push origin $date
+```
 
 ## 验证清单
 
