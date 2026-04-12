@@ -12,7 +12,7 @@ urgency: 0
 cost: 0
 priority_score: 1
 purpose_tags: []
-project: ""
+project: AI
 date: 2026-04-10
 ---
 [[主流大模型API性价比调研任务]]- [ ] 完成 SillyTavern 本体安装、API 接入、角色卡创建与痛点记录 📅 2026-04-17

@@ -11,7 +11,7 @@ urgency: 0
 cost: 1
 priority_score: 0
 purpose_tags: []
-project: ""
+project: AI
 date: 2026-04-04
 ---
 ## Task 03 · 建立市场认知——AI 人才真实能力要求

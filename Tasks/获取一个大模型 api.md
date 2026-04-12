@@ -32,6 +32,7 @@ date: 2026-04-06
 - [x] 已在平台控制台生成并保存了自己的 API Key：sk-cb6f1a5c09524cc7a55b2c10a75c9d57 ✅ 2026-04-06
 - [x] 能解释清楚：API Key 是什么、base_url 是什么、为什么不能把 Key 公开 ✅ 2026-04-06
 - [x] 测试问答使用了平台的余量 ✅ 2026-04-06
+- [ ] 🛫 一个语音tts api，豆包
 ## 现实动作（下一步具体动作）
 
 1. 今天：打开 [DeepSeek 开放平台](https://platform.deepseek.com) 或

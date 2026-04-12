@@ -12,8 +12,31 @@ views:
       - time_estimate
       - status
       - formula.未命名
+      - project
     sort:
       - property: file.ctime
         direction: DESC
       - property: status
         direction: DESC
+    rowHeight: medium
+  - type: table
+    name: 雇佣工作
+    filters:
+      and:
+        - type == "task"
+        - project == "雇佣工作"
+    order:
+      - file.name
+      - file.ctime
+      - time_estimate
+      - status
+      - formula.未命名
+      - project
+    sort:
+      - property: file.ctime
+        direction: DESC
+      - property: status
+        direction: DESC
+    cardSize: 330
+    imageAspectRatio: 0.8
+    rowHeight: medium
