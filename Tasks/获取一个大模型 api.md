@@ -12,7 +12,7 @@ urgency: 0
 cost: 0
 priority_score: 0
 purpose_tags: []
-project: ""
+project: AI
 date: 2026-04-06
 ---
 - [x] 无技术背景，完整跑通一个 AI 大模型 API 调用 📅 2026-04-06 ✅ 2026-04-06

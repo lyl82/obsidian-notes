@@ -50,7 +50,7 @@ date: 2026-04-04
 	- [ ] `Prompt engineer`
 	- [ ] `AI automation`
 	- [ ] `LLM application`
-- [ ] 平台覆盖：国内平台（Boss直聘 / 拉勾）各半
+
 
 #### 第二步：提取关键词
 - [ ] 逐条阅读 JD，划出反复出现的技能词

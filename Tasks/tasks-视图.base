@@ -13,7 +13,7 @@ views:
       - status
       - formula.未命名
     sort:
-      - property: status
-        direction: DESC
       - property: file.ctime
+        direction: DESC
+      - property: status
         direction: DESC
