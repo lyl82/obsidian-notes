@@ -5,7 +5,8 @@ action: ""
 scheduled_time: ""
 estimated_duration: 0
 actual_duration: 0
-status: pending
+status:
+  - done
 value: 0
 urgency: 0
 cost: 0
@@ -35,3 +36,4 @@ date: 2026-04-01
 
 - [ ]  🛫 2026-04-01 :48[[深关通-客服专员]]；
 - [ ]  🛫 2026-04-08 21:48 [[昱链科-客户交付运营专员]]；
+- [ ]  🛫 2026-04-17 09:51 [[信华信-项目专员]]；

@@ -1,0 +1,168 @@
+filters:
+  and:
+    - type == "task"
+    - file.ext == "md"
+formulas:
+  days_until_due: if(due_date, (date(due_date) - today()).days, "")
+  is_overdue: if(due_date, date(due_date) < today() && status != "done", false)
+  priority_label: if(priority == 1, "🔴 High", if(priority == 2, "🟡 Medium", if(priority == 3, "🟢 Low", "⚪ None")))
+  status_icon: if(status == "done", "✅", if(status == "in-progress", "🔄", if(status == "todo", "📝", "❓")))
+  time_remaining: if(time_estimate && time_spent, time_estimate - time_spent, if(time_estimate, time_estimate, ""))
+  completion_percentage: if(time_estimate && time_spent, (time_spent / time_estimate * 100).round(0), if(status == "done", 100, 0))
+  days_since_created: (today() - file.ctime).days
+  urgency_score: if(priority == 1, 3, if(priority == 2, 2, if(priority == 3, 1, 0))) + if(formula.is_overdue, 2, 0) + if(formula.days_until_due && formula.days_until_due <= 3, 1, 0)
+properties:
+  status:
+    displayName: Status
+  priority:
+    displayName: Priority
+  due_date:
+    displayName: Due Date
+  project:
+    displayName: Project
+  time_estimate:
+    displayName: Time Estimate (h)
+  time_spent:
+    displayName: Time Spent (h)
+  formula.days_until_due:
+    displayName: Days Until Due
+  formula.priority_label:
+    displayName: Priority
+  formula.is_overdue:
+    displayName: Overdue
+  formula.time_remaining:
+    displayName: Time Remaining (h)
+  formula.completion_percentage:
+    displayName: Completion %
+  formula.days_since_created:
+    displayName: Days Since Created
+  formula.urgency_score:
+    displayName: Urgency Score
+views:
+  - type: table
+    name: Active Tasks by Urgency
+    filters:
+      and:
+        - status != "done"
+    order:
+      - formula.urgency_score
+      - formula.priority_label
+      - file.name
+      - formula.days_until_due
+      - due_date
+      - status
+      - project
+    sort:
+      - property: formula.days_until_due
+        direction: ASC
+      - property: formula.urgency_score
+        direction: DESC
+    summaries:
+      formula.urgency_score: Average
+      formula.completion_percentage: Average
+    rowHeight: medium
+    columnSize:
+      formula.urgency_score: 100
+      formula.priority_label: 120
+      file.name: 300
+      formula.days_until_due: 120
+      due_date: 120
+  - type: table
+    name: Tasks by Project
+    groupBy:
+      property: project
+      direction: ASC
+    order:
+      - project
+      - formula.priority_label
+      - file.name
+      - status
+      - due_date
+      - formula.days_until_due
+    summaries:
+      formula.completion_percentage: Average
+      formula.time_remaining: Sum
+    rowHeight: medium
+    columnSize:
+      project: 200
+      formula.priority_label: 120
+      file.name: 300
+  - type: table
+    name: Overdue Tasks
+    filters:
+      and:
+        - formula.is_overdue == true
+    order:
+      - formula.days_until_due
+      - formula.priority_label
+      - file.name
+      - project
+      - status
+    sort:
+      - property: formula.days_until_due
+        direction: ASC
+    rowHeight: medium
+    columnSize:
+      formula.days_until_due: 120
+      formula.priority_label: 120
+      file.name: 300
+  - type: table
+    name: Completed Tasks
+    filters:
+      and:
+        - status == "done"
+    order:
+      - file.mtime
+      - file.name
+      - project
+      - time_spent
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 50
+    summaries:
+      time_spent: Sum
+    rowHeight: medium
+    columnSize:
+      file.mtime: 150
+      file.name: 300
+      project: 150
+  - type: cards
+    name: Task Cards
+    filters:
+      and:
+        - status != "done"
+    order:
+      - formula.priority_label
+      - file.name
+      - status
+      - formula.days_until_due
+      - project
+    cardSize: 350
+    imageAspectRatio: 0.8
+    rowHeight: medium
+  - type: table
+    name: Time Tracking
+    filters:
+      and:
+        - time_estimate || time_spent
+    order:
+      - file.name
+      - time_estimate
+      - time_spent
+      - formula.time_remaining
+      - formula.completion_percentage
+      - status
+      - project
+    summaries:
+      time_estimate: Sum
+      time_spent: Sum
+      formula.time_remaining: Sum
+      formula.completion_percentage: Average
+    rowHeight: medium
+    columnSize:
+      file.name: 300
+      time_estimate: 120
+      time_spent: 120
+      formula.time_remaining: 120
+      formula.completion_percentage: 120

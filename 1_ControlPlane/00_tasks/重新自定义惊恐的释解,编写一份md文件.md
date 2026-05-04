@@ -5,7 +5,8 @@ action: ""
 scheduled_time: ""
 estimated_duration: 10
 actual_duration: 0
-status: pending
+status:
+  - pending
 value: 0
 urgency: 0
 cost: 0

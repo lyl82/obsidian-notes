@@ -6,7 +6,8 @@ scheduled_time: ""
 done_time:
 estimated_duration: 0
 actual_duration: 0
-status: pending
+status:
+  - done
 value: 0
 urgency: 0
 cost: 0

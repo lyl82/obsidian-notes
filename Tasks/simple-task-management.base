@@ -1,0 +1,85 @@
+filters:
+  and:
+    - type == "task"
+    - file.ext == "md"
+formulas:
+  days_until_due: if(due_date, (date(due_date) - today()).days, "")
+  is_overdue: if(due_date, date(due_date) < today() && status != "done", false)
+  priority_label: if(priority == 1, "🔴 High", if(priority == 2, "🟡 Medium", "🟢 Low"))
+  status_icon: if(status == "done", "✅", if(status == "in-progress", "🔄", "📝"))
+properties:
+  status:
+    displayName: Status
+  priority:
+    displayName: Priority
+  due_date:
+    displayName: Due Date
+  project:
+    displayName: Project
+  formula.days_until_due:
+    displayName: Days Until Due
+  formula.priority_label:
+    displayName: Priority
+views:
+  - type: table
+    name: All Tasks
+    order:
+      - formula.priority_label
+      - file.name
+      - status
+      - formula.days_until_due
+      - due_date
+      - project
+    sort:
+      - property: formula.days_until_due
+        direction: ASC
+    rowHeight: medium
+    columnSize:
+      formula.priority_label: 100
+      file.name: 300
+      formula.days_until_due: 120
+  - type: table
+    name: Active Tasks
+    filters:
+      and:
+        - status != "done"
+    order:
+      - formula.priority_label
+      - file.name
+      - formula.days_until_due
+      - due_date
+      - project
+    rowHeight: medium
+    columnSize:
+      formula.priority_label: 100
+      file.name: 300
+      formula.days_until_due: 120
+  - type: table
+    name: Completed Tasks
+    filters:
+      and:
+        - status == "done"
+    order:
+      - file.mtime
+      - file.name
+      - project
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 30
+    rowHeight: medium
+    columnSize:
+      file.mtime: 150
+      file.name: 300
+      project: 150
+  - type: cards
+    name: Task Cards
+    filters:
+      and:
+        - status != "done"
+    order:
+      - formula.priority_label
+      - file.name
+      - formula.days_until_due
+    cardSize: 300
+    rowHeight: medium

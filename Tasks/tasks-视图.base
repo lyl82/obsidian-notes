@@ -1,5 +1,5 @@
 formulas:
-  未命名: ""
+  未命名: time_estimate+完成时间
 views:
   - type: table
     name: 总task
@@ -13,8 +13,11 @@ views:
       - status
       - formula.未命名
       - project
+      - priority_score
     sort:
       - property: file.ctime
+        direction: DESC
+      - property: priority_score
         direction: DESC
       - property: status
         direction: DESC
@@ -39,4 +42,54 @@ views:
         direction: DESC
     cardSize: 330
     imageAspectRatio: 0.8
+    rowHeight: medium
+    columnSize:
+      file.name: 280
+  - type: table
+    name: ai
+    filters:
+      and:
+        - type == "task"
+        - project == "AI"
+    order:
+      - file.name
+      - file.ctime
+      - time_estimate
+      - status
+      - formula.未命名
+      - project
+      - priority_score
+    sort:
+      - property: priority_score
+        direction: DESC
+      - property: status
+        direction: DESC
+      - property: file.ctime
+        direction: DESC
+      - property: formula.未命名
+        direction: DESC
+    rowHeight: medium
+  - type: table
+    name: 非done
+    filters:
+      and:
+        - type == "task"
+        - '!status.containsAny("done", "abort")'
+    order:
+      - file.name
+      - file.ctime
+      - time_estimate
+      - status
+      - formula.未命名
+      - project
+      - priority_score
+    sort:
+      - property: priority_score
+        direction: DESC
+      - property: file.ctime
+        direction: DESC
+      - property: formula.未命名
+        direction: DESC
+      - property: status
+        direction: DESC
     rowHeight: medium
