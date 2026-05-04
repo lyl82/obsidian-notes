@@ -1,0 +1,50 @@
+# 归档目录
+7_Archive/
+
+# 图片文件
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.svg
+*.ico
+
+# 视频文件
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.flv
+*.wmv
+*.webm
+*.mpeg
+*.mpg
+
+# 音频文件
+*.mp3
+*.wav
+*.flac
+*.ogg
+*.m4a
+
+# 大型文档和压缩文件
+*.pdf
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+
+# 可执行文件和安装包
+*.exe
+*.dll
+*.msi
+*.dmg
+
+# Obsidian 缓存文件
+.obsidian/
