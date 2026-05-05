@@ -1,0 +1,23 @@
+{
+  "id": "conv-1776088301358-d4i6nqg4m",
+  "providerId": "claude",
+  "title": "说说你的理解",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1776088301371,
+  "updatedAt": 1776830208534,
+  "lastResponseAt": 1776830208534,
+  "sessionId": "0926cf7d-db48-49f8-9b42-2b7c73823d33",
+  "providerState": {
+    "providerSessionId": "0926cf7d-db48-49f8-9b42-2b7c73823d33"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 866,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 39936,
+    "contextWindow": 200000,
+    "contextTokens": 40802,
+    "percentage": 20,
+    "contextWindowIsAuthoritative": true
+  }
+}

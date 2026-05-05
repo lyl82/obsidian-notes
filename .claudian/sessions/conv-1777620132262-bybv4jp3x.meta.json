@@ -1,0 +1,24 @@
+{
+  "id": "conv-1777620132262-bybv4jp3x",
+  "providerId": "claude",
+  "title": "计划并实现语音接入",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777620132276,
+  "updatedAt": 1777861135234,
+  "lastResponseAt": 1777620546007,
+  "sessionId": "6ae42f03-e1ae-4dc2-8e44-063da040097b",
+  "providerState": {
+    "providerSessionId": "6ae42f03-e1ae-4dc2-8e44-063da040097b"
+  },
+  "currentNote": "LifeOS/Tasks/SillyTavern（酒馆）tasks.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 855,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 23552,
+    "contextWindow": 200000,
+    "contextTokens": 24407,
+    "percentage": 12,
+    "contextWindowIsAuthoritative": true
+  }
+}

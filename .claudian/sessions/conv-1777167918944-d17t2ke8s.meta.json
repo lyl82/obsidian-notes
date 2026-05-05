@@ -1,0 +1,24 @@
+{
+  "id": "conv-1777167918944-d17t2ke8s",
+  "providerId": "claude",
+  "title": "Test ability to read linked notes",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777167918946,
+  "updatedAt": 1777605670929,
+  "lastResponseAt": 1777168564832,
+  "sessionId": "c5330544-285b-48d6-ad5e-f724f45acb9e",
+  "providerState": {
+    "providerSessionId": "c5330544-285b-48d6-ad5e-f724f45acb9e"
+  },
+  "currentNote": "LifeOS/3_Domains/2_DAO复盘/锻炼-审计.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 320,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 29312,
+    "contextWindow": 200000,
+    "contextTokens": 29632,
+    "percentage": 15,
+    "contextWindowIsAuthoritative": true
+  }
+}

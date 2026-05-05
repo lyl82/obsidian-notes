@@ -1,0 +1,36 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - type == "需求"
+    order:
+      - file.name
+      - file.ctime
+      - description
+      - status
+    sort:
+      - property: status
+        direction: DESC
+      - property: file.ctime
+        direction: DESC
+    rowHeight: medium
+  - type: table
+    name: TODO
+    filters:
+      and:
+        - type == "需求"
+        - '!status.containsAny("🍎结果d", "done")'
+    order:
+      - file.name
+      - file.ctime
+      - status
+      - 截止时间
+    sort:
+      - property: 截止时间
+        direction: ASC
+      - property: file.ctime
+        direction: DESC
+      - property: priority
+        direction: ASC
+    rowHeight: tall

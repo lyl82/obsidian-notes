@@ -1,0 +1,24 @@
+{
+  "id": "conv-1777873445969-zzapeqd8d",
+  "providerId": "claude",
+  "title": "查询谭泽娇的事实经历",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777873445969,
+  "updatedAt": 1777904370419,
+  "lastResponseAt": 1777873529319,
+  "sessionId": "2840843c-6f5a-42d8-8475-90dd52eb5a48",
+  "providerState": {
+    "providerSessionId": "2840843c-6f5a-42d8-8475-90dd52eb5a48"
+  },
+  "currentNote": "LifeOS/3_Domains/Relationships/1_人档案层/谭泽娇.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 10159,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 29952,
+    "contextWindow": 200000,
+    "contextTokens": 40111,
+    "percentage": 20,
+    "contextWindowIsAuthoritative": true
+  }
+}

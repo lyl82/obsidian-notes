@@ -1,0 +1,24 @@
+{
+  "id": "conv-1777560788069-s0cfflqbc",
+  "providerId": "claude",
+  "title": "Scan and organize LifeOS inbox",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777560788082,
+  "updatedAt": 1777605678261,
+  "lastResponseAt": 1777561093482,
+  "sessionId": "1d129629-e6ea-4d99-84d0-a94e9a5ed863",
+  "providerState": {
+    "providerSessionId": "1d129629-e6ea-4d99-84d0-a94e9a5ed863"
+  },
+  "currentNote": "LifeOS/3_Domains/02_tasks/培训学习.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 410,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 33920,
+    "contextWindow": 200000,
+    "contextTokens": 34330,
+    "percentage": 17,
+    "contextWindowIsAuthoritative": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "7268ce3b-5f38-4ffc-92e6-438b0f1ec055",
+  "title": "我有多少额度",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "我有多少额度",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n我有多少额度\n\n"
+        }
+      ],
+      "id": "5616f0ae-51c4-4909-90d3-532947b7a447",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "tasks/需求/LifeOS/1_ControlPlane/记录-一天感受.md"
+        }
+      ]
+    }
+  ],
+  "createdAt": 1767000403783,
+  "updatedAt": 1767000403783,
+  "schemaVersion": 1
+}
