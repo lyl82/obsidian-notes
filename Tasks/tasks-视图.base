@@ -15,9 +15,9 @@ views:
       - project
       - priority_score
     sort:
-      - property: file.ctime
-        direction: DESC
       - property: priority_score
+        direction: DESC
+      - property: file.ctime
         direction: DESC
       - property: status
         direction: DESC

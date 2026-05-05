@@ -1,0 +1,23 @@
+{
+  "id": "conv-1777964490041-gt36f5cfi",
+  "providerId": "claude",
+  "title": "Analyze relationship deficit in social model",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777964490042,
+  "updatedAt": 1777966548577,
+  "lastResponseAt": 1777966548577,
+  "sessionId": "88ea6bca-b22b-4e38-b208-0077caa13b32",
+  "providerState": {
+    "providerSessionId": "88ea6bca-b22b-4e38-b208-0077caa13b32"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 246,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 43648,
+    "contextWindow": 200000,
+    "contextTokens": 43894,
+    "percentage": 22,
+    "contextWindowIsAuthoritative": true
+  }
+}

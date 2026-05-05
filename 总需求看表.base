@@ -9,6 +9,7 @@ views:
       - file.ctime
       - description
       - status
+      - type
     sort:
       - property: status
         direction: DESC

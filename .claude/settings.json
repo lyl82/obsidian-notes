@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Grep(谭泽娇|tzj)"
+      "Grep(谭泽娇|tzj)",
+      "Bash(dir \"D:\\\\个人记录\\\\obsidian-file\\\\wjmber-LifeOS\\\\3_Domains\\\\Relationships\\\\3_结构层\" /b)"
     ]
   }
 }
